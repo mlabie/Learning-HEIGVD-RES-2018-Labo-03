@@ -2,6 +2,7 @@ package ch.heigvd.res.labs.smtp.net.client;
 
 import java.io.IOException;
 import java.util.List;
+import java.util.concurrent.TimeoutException;
 
 /**
  * Set of function that need to be implemented by the Client to send mails using the SMTP protocol.
@@ -46,8 +47,10 @@ public interface ISMTPClient {
 
     /**
      * Send the Hello command to the server.
+     *
+     * @param helo the helo word.
      */
-    public void EHLO();
+    public void EHLO(String helo) throws IOException, TimeoutException;
 
 
     /**
@@ -55,21 +58,16 @@ public interface ISMTPClient {
      *
      * @param mail_from : the sender's email address.
      */
-    public void mailFrom(String mail_from);
+    public void mailFrom(String mail_from) throws IOException;
 
     /**
      * choose the mail's receiver.
      *
      * @param mail_to : the receiver's email address.
+     * @return True if the mail was accepted. False otherwise.
      */
-    public String mailTo(String mail_to);
+    public boolean mailTo(String mail_to) throws IOException;
 
-    /**
-     * Check if the mail receiver address we send to the server was accepted.
-     *
-     * @return true is it was accepted, no otherwise.
-     */
-    public boolean checkIfReceiverAccepted();
 
     /**
      * Send an e-mail
@@ -80,6 +78,6 @@ public interface ISMTPClient {
      * @param text
      * @return the response of the server.
      */
-    public String sendMail(String mail_from, String mail_to, String subject, String text);
+    public String sendMail(String mail_from, String mail_to, String subject, String text) throws IOException;
 
 }
