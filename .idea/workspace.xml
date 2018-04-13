@@ -2,14 +2,35 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="9e81f7e5-1379-4113-81f8-e54823cc5882" name="Default" comment="">
-      <change beforePath="" afterPath="$PROJECT_DIR$/SMTPProtocolClient-code/src/main/java/ch/heigvd/res/labs/smtp/data/ForgedEmail.java" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/SMTPProtocolClient-code/src/main/java/ch/heigvd/res/labs/smtp/data/GroupOfVictims.java" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/SMTPProtocolClient-code/src/main/java/ch/heigvd/res/labs/smtp/data/Victim.java" />
+      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" afterPath="$PROJECT_DIR$/.idea/compiler.xml" />
+      <change beforePath="$PROJECT_DIR$/.idea/encodings.xml" afterPath="$PROJECT_DIR$/.idea/encodings.xml" />
+      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" afterPath="$PROJECT_DIR$/.idea/modules.xml" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change beforePath="$PROJECT_DIR$/SMTPProtocolClient-build.iml" afterPath="$PROJECT_DIR$/SMTPForgedEmailClient-build.iml" />
+      <change beforePath="$PROJECT_DIR$/SMTPProtocolClient-code/SMTPProtocolClient-code.iml" afterPath="$PROJECT_DIR$/SMTPForgedEmailClient-code/SMTPProtocolClient-code.iml" />
+      <change beforePath="$PROJECT_DIR$/SMTPProtocolClient-code/pom.xml" afterPath="$PROJECT_DIR$/SMTPForgedEmailClient-code/pom.xml" />
+      <change beforePath="$PROJECT_DIR$/SMTPProtocolClient-code/src/main/java/ch/heigvd/res/labs/smtp/SMTPClient.java" afterPath="$PROJECT_DIR$/SMTPForgedEmailClient-code/src/main/java/ch/heigvd/res/labs/smtp/SMTPClient.java" />
+      <change beforePath="$PROJECT_DIR$/SMTPProtocolClient-code/src/main/java/ch/heigvd/res/labs/smtp/data/ForgedEmail.java" afterPath="$PROJECT_DIR$/SMTPForgedEmailClient-code/src/main/java/ch/heigvd/res/labs/smtp/data/ForgedEmail.java" />
+      <change beforePath="$PROJECT_DIR$/SMTPProtocolClient-code/src/main/java/ch/heigvd/res/labs/smtp/data/GroupOfVictims.java" afterPath="$PROJECT_DIR$/SMTPForgedEmailClient-code/src/main/java/ch/heigvd/res/labs/smtp/data/GroupOfVictims.java" />
+      <change beforePath="$PROJECT_DIR$/SMTPProtocolClient-code/src/main/java/ch/heigvd/res/labs/smtp/data/Victim.java" afterPath="$PROJECT_DIR$/SMTPForgedEmailClient-code/src/main/java/ch/heigvd/res/labs/smtp/data/Victim.java" />
+      <change beforePath="$PROJECT_DIR$/SMTPProtocolClient-code/src/main/java/ch/heigvd/res/labs/smtp/net/client/ISMTPClient.java" afterPath="$PROJECT_DIR$/SMTPForgedEmailClient-code/src/main/java/ch/heigvd/res/labs/smtp/net/client/ISMTPClient.java" />
+      <change beforePath="$PROJECT_DIR$/SMTPProtocolClient-code/src/main/java/ch/heigvd/res/labs/smtp/net/client/SMTPClientImpl.java" afterPath="$PROJECT_DIR$/SMTPForgedEmailClient-code/src/main/java/ch/heigvd/res/labs/smtp/net/client/SMTPClientImpl.java" />
+      <change beforePath="$PROJECT_DIR$/SMTPProtocolClient-code/src/main/java/ch/heigvd/res/labs/smtp/net/protocol/SMTPClientProtocol.java" afterPath="$PROJECT_DIR$/SMTPForgedEmailClient-code/src/main/java/ch/heigvd/res/labs/smtp/net/protocol/SMTPClientProtocol.java" />
+      <change beforePath="$PROJECT_DIR$/SMTPProtocolClient-code/src/main/java/ch/heigvd/res/labs/smtp/net/protocol/SMTPServerProtocol.java" afterPath="$PROJECT_DIR$/SMTPForgedEmailClient-code/src/main/java/ch/heigvd/res/labs/smtp/net/protocol/SMTPServerProtocol.java" />
+      <change beforePath="$PROJECT_DIR$/SMTPProtocolClient-code/target/classes/ch/heigvd/res/labs/smtp/SMTPClient.class" afterPath="$PROJECT_DIR$/SMTPForgedEmailClient-code/target/classes/ch/heigvd/res/labs/smtp/SMTPClient.class" />
+      <change beforePath="$PROJECT_DIR$/SMTPProtocolClient-code/target/classes/ch/heigvd/res/labs/smtp/net/client/ISMTPClient.class" afterPath="$PROJECT_DIR$/SMTPForgedEmailClient-code/target/classes/ch/heigvd/res/labs/smtp/net/client/ISMTPClient.class" />
+      <change beforePath="$PROJECT_DIR$/SMTPProtocolClient-code/target/classes/ch/heigvd/res/labs/smtp/net/client/SMTPClientImpl.class" afterPath="$PROJECT_DIR$/SMTPForgedEmailClient-code/target/classes/ch/heigvd/res/labs/smtp/net/client/SMTPClientImpl.class" />
+      <change beforePath="$PROJECT_DIR$/SMTPProtocolClient-code/target/classes/ch/heigvd/res/labs/smtp/net/protocol/SMTPClientProtocol.class" afterPath="$PROJECT_DIR$/SMTPForgedEmailClient-code/target/classes/ch/heigvd/res/labs/smtp/net/protocol/SMTPClientProtocol.class" />
+      <change beforePath="$PROJECT_DIR$/SMTPProtocolClient-code/target/classes/ch/heigvd/res/labs/smtp/net/protocol/SMTPServerProtocol.class" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/SMTPProtocolClient-test/SMTPProtocolClient-test.iml" afterPath="$PROJECT_DIR$/SMTPForgedEmailClient-test/SMTPProtocolClient-test.iml" />
+      <change beforePath="$PROJECT_DIR$/SMTPProtocolClient-test/pom.xml" afterPath="$PROJECT_DIR$/SMTPForgedEmailClient-test/pom.xml" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" afterPath="$PROJECT_DIR$/pom.xml" />
     </list>
     <ignored path="$PROJECT_DIR$/target/" />
     <ignored path="$PROJECT_DIR$/SMTPProtocolClient-test/target/" />
     <ignored path="$PROJECT_DIR$/SMTPProtocolClient-code/target/" />
+    <ignored path="$PROJECT_DIR$/SMTPForgedEmailClient-test/target/" />
+    <ignored path="$PROJECT_DIR$/SMTPForgedEmailClient-code/target/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -19,87 +40,11 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="SMTPServerProtocol.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/SMTPProtocolClient-code/src/main/java/ch/heigvd/res/labs/smtp/net/protocol/SMTPServerProtocol.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="108">
-              <caret line="6" column="13" lean-forward="false" selection-start-line="6" selection-start-column="13" selection-end-line="6" selection-end-column="13" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="SMTPClientProtocol.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/SMTPProtocolClient-code/src/main/java/ch/heigvd/res/labs/smtp/net/protocol/SMTPClientProtocol.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="109">
-              <caret line="15" column="65" lean-forward="false" selection-start-line="15" selection-start-column="65" selection-end-line="15" selection-end-column="65" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="ISMTPClient.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/SMTPProtocolClient-code/src/main/java/ch/heigvd/res/labs/smtp/net/client/ISMTPClient.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="271">
-              <caret line="78" column="42" lean-forward="true" selection-start-line="78" selection-start-column="42" selection-end-line="78" selection-end-column="42" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="SMTPClientImpl.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/SMTPProtocolClient-code/src/main/java/ch/heigvd/res/labs/smtp/net/client/SMTPClientImpl.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-161">
-              <caret line="43" column="0" lean-forward="false" selection-start-line="43" selection-start-column="0" selection-end-line="43" selection-end-column="0" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="SMTPClient.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/SMTPProtocolClient-code/src/main/java/ch/heigvd/res/labs/smtp/SMTPClient.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="180">
-              <caret line="22" column="32" lean-forward="false" selection-start-line="22" selection-start-column="32" selection-end-line="22" selection-end-column="32" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Victim.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/SMTPProtocolClient-code/src/main/java/ch/heigvd/res/labs/smtp/data/Victim.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="360">
-              <caret line="20" column="4" lean-forward="true" selection-start-line="20" selection-start-column="4" selection-end-line="20" selection-end-column="25" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="GroupOfVictims.java" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/SMTPProtocolClient-code/src/main/java/ch/heigvd/res/labs/smtp/data/GroupOfVictims.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="342">
-              <caret line="19" column="57" lean-forward="false" selection-start-line="19" selection-start-column="57" selection-end-line="19" selection-end-column="57" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="ForgedEmail.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/SMTPProtocolClient-code/src/main/java/ch/heigvd/res/labs/smtp/data/ForgedEmail.java">
+      <file leaf-file-name="ForgedEmail.java" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/SMTPForgedEmailClient-code/src/main/java/ch/heigvd/res/labs/smtp/data/ForgedEmail.java">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="270">
-              <caret line="15" column="25" lean-forward="false" selection-start-line="15" selection-start-column="25" selection-end-line="15" selection-end-column="25" />
+              <caret line="15" column="25" lean-forward="true" selection-start-line="15" selection-start-column="25" selection-end-line="15" selection-end-column="25" />
               <folding />
             </state>
           </provider>
@@ -136,6 +81,9 @@
         <option value="$PROJECT_DIR$/SMTPProtocolClient-code/src/main/java/ch/heigvd/res/labs/smtp/data/Victim.java" />
         <option value="$PROJECT_DIR$/SMTPProtocolClient-code/src/main/java/ch/heigvd/res/labs/smtp/data/ForgedEmail.java" />
         <option value="$PROJECT_DIR$/SMTPProtocolClient-code/src/main/java/ch/heigvd/res/labs/smtp/data/GroupOfVictims.java" />
+        <option value="$PROJECT_DIR$/pom.xml" />
+        <option value="$PROJECT_DIR$/SMTPForgedEmailClient-code/pom.xml" />
+        <option value="$PROJECT_DIR$/SMTPForgedEmailClient-test/pom.xml" />
       </list>
     </option>
   </component>
@@ -160,6 +108,8 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="AndroidView" />
+      <pane id="PackagesPane" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -170,25 +120,30 @@
             <path>
               <item name="SMTPProtocolClient-build" type="b2602c69:ProjectViewProjectNode" />
               <item name="Learning-HEIGVD-RES-2018-Labo-03" type="462c0819:PsiDirectoryNode" />
-              <item name="SMTPProtocolClient-code" type="462c0819:PsiDirectoryNode" />
+              <item name=".idea" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="SMTPProtocolClient-build" type="b2602c69:ProjectViewProjectNode" />
               <item name="Learning-HEIGVD-RES-2018-Labo-03" type="462c0819:PsiDirectoryNode" />
-              <item name="SMTPProtocolClient-code" type="462c0819:PsiDirectoryNode" />
+              <item name="SMTPForgedEmailClient-code" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="SMTPProtocolClient-build" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Learning-HEIGVD-RES-2018-Labo-03" type="462c0819:PsiDirectoryNode" />
+              <item name="SMTPForgedEmailClient-code" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="SMTPProtocolClient-build" type="b2602c69:ProjectViewProjectNode" />
               <item name="Learning-HEIGVD-RES-2018-Labo-03" type="462c0819:PsiDirectoryNode" />
-              <item name="SMTPProtocolClient-code" type="462c0819:PsiDirectoryNode" />
+              <item name="SMTPForgedEmailClient-code" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="main" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="SMTPProtocolClient-build" type="b2602c69:ProjectViewProjectNode" />
               <item name="Learning-HEIGVD-RES-2018-Labo-03" type="462c0819:PsiDirectoryNode" />
-              <item name="SMTPProtocolClient-code" type="462c0819:PsiDirectoryNode" />
+              <item name="SMTPForgedEmailClient-code" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="main" type="462c0819:PsiDirectoryNode" />
               <item name="java" type="462c0819:PsiDirectoryNode" />
@@ -196,7 +151,7 @@
             <path>
               <item name="SMTPProtocolClient-build" type="b2602c69:ProjectViewProjectNode" />
               <item name="Learning-HEIGVD-RES-2018-Labo-03" type="462c0819:PsiDirectoryNode" />
-              <item name="SMTPProtocolClient-code" type="462c0819:PsiDirectoryNode" />
+              <item name="SMTPForgedEmailClient-code" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="main" type="462c0819:PsiDirectoryNode" />
               <item name="java" type="462c0819:PsiDirectoryNode" />
@@ -205,7 +160,7 @@
             <path>
               <item name="SMTPProtocolClient-build" type="b2602c69:ProjectViewProjectNode" />
               <item name="Learning-HEIGVD-RES-2018-Labo-03" type="462c0819:PsiDirectoryNode" />
-              <item name="SMTPProtocolClient-code" type="462c0819:PsiDirectoryNode" />
+              <item name="SMTPForgedEmailClient-code" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="main" type="462c0819:PsiDirectoryNode" />
               <item name="java" type="462c0819:PsiDirectoryNode" />
@@ -215,7 +170,7 @@
             <path>
               <item name="SMTPProtocolClient-build" type="b2602c69:ProjectViewProjectNode" />
               <item name="Learning-HEIGVD-RES-2018-Labo-03" type="462c0819:PsiDirectoryNode" />
-              <item name="SMTPProtocolClient-code" type="462c0819:PsiDirectoryNode" />
+              <item name="SMTPForgedEmailClient-code" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="main" type="462c0819:PsiDirectoryNode" />
               <item name="java" type="462c0819:PsiDirectoryNode" />
@@ -225,7 +180,7 @@
             <path>
               <item name="SMTPProtocolClient-build" type="b2602c69:ProjectViewProjectNode" />
               <item name="Learning-HEIGVD-RES-2018-Labo-03" type="462c0819:PsiDirectoryNode" />
-              <item name="SMTPProtocolClient-code" type="462c0819:PsiDirectoryNode" />
+              <item name="SMTPForgedEmailClient-code" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="main" type="462c0819:PsiDirectoryNode" />
               <item name="java" type="462c0819:PsiDirectoryNode" />
@@ -236,7 +191,7 @@
             <path>
               <item name="SMTPProtocolClient-build" type="b2602c69:ProjectViewProjectNode" />
               <item name="Learning-HEIGVD-RES-2018-Labo-03" type="462c0819:PsiDirectoryNode" />
-              <item name="SMTPProtocolClient-code" type="462c0819:PsiDirectoryNode" />
+              <item name="SMTPForgedEmailClient-code" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="main" type="462c0819:PsiDirectoryNode" />
               <item name="java" type="462c0819:PsiDirectoryNode" />
@@ -244,14 +199,17 @@
               <item name="net" type="462c0819:PsiDirectoryNode" />
               <item name="protocol" type="462c0819:PsiDirectoryNode" />
             </path>
+            <path>
+              <item name="SMTPProtocolClient-build" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Learning-HEIGVD-RES-2018-Labo-03" type="462c0819:PsiDirectoryNode" />
+              <item name="SMTPForgedEmailClient-test" type="462c0819:PsiDirectoryNode" />
+            </path>
           </expand>
           <select />
         </subPane>
       </pane>
-      <pane id="Scratches" />
-      <pane id="AndroidView" />
-      <pane id="PackagesPane" />
       <pane id="Scope" />
+      <pane id="Scratches" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -334,6 +292,18 @@
       <envs />
       <patterns />
     </configuration>
+    <configuration default="true" type="JetRunConfigurationType" factoryName="Kotlin">
+      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
+      <option name="MAIN_CLASS_NAME" />
+      <option name="VM_PARAMETERS" />
+      <option name="PROGRAM_PARAMETERS" />
+      <option name="WORKING_DIRECTORY" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <module name="SMTPProtocolClient-build" />
+      <envs />
+    </configuration>
     <configuration default="true" type="Remote" factoryName="Remote">
       <option name="USE_SOCKET_TRANSPORT" value="true" />
       <option name="SERVER_MODE" value="false" />
@@ -408,18 +378,18 @@
       <window_info id="Capture Analysis" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.4402985" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.4402985" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.303125" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="UI Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Theme Preview" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
@@ -436,7 +406,7 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/SMTPProtocolClient-code/src/main/java/ch/heigvd/res/labs/smtp/net/protocol/SMTPServerProtocol.java">
+    <entry file="file://$PROJECT_DIR$/SMTPForgedEmailClient-code/src/main/java/ch/heigvd/res/labs/smtp/net/protocol/SMTPServerProtocol.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="108">
           <caret line="6" column="13" lean-forward="false" selection-start-line="6" selection-start-column="13" selection-end-line="6" selection-end-column="13" />
@@ -444,7 +414,15 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/SMTPProtocolClient-code/src/main/java/ch/heigvd/res/labs/smtp/net/client/ISMTPClient.java">
+    <entry file="file://$PROJECT_DIR$/SMTPForgedEmailClient-code/src/main/java/ch/heigvd/res/labs/smtp/net/protocol/SMTPClientProtocol.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="270">
+          <caret line="15" column="65" lean-forward="false" selection-start-line="15" selection-start-column="65" selection-end-line="15" selection-end-column="65" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/SMTPForgedEmailClient-code/src/main/java/ch/heigvd/res/labs/smtp/net/client/ISMTPClient.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1368">
           <caret line="78" column="42" lean-forward="true" selection-start-line="78" selection-start-column="42" selection-end-line="78" selection-end-column="42" />
@@ -454,7 +432,69 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/SMTPProtocolClient-code/src/main/java/ch/heigvd/res/labs/smtp/net/client/SMTPClientImpl.java">
+    <entry file="file://$PROJECT_DIR$/SMTPForgedEmailClient-code/src/main/java/ch/heigvd/res/labs/smtp/net/client/SMTPClientImpl.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="648">
+          <caret line="43" column="0" lean-forward="false" selection-start-line="43" selection-start-column="0" selection-end-line="43" selection-end-column="0" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/SMTPForgedEmailClient-code/src/main/java/ch/heigvd/res/labs/smtp/SMTPClient.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="270">
+          <caret line="22" column="32" lean-forward="false" selection-start-line="22" selection-start-column="32" selection-end-line="22" selection-end-column="32" />
+          <folding>
+            <element signature="imports" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/SMTPForgedEmailClient-code/src/main/java/ch/heigvd/res/labs/smtp/data/Victim.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="360">
+          <caret line="20" column="4" lean-forward="true" selection-start-line="20" selection-start-column="4" selection-end-line="20" selection-end-column="25" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/SMTPForgedEmailClient-code/src/main/java/ch/heigvd/res/labs/smtp/data/ForgedEmail.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="270">
+          <caret line="15" column="25" lean-forward="false" selection-start-line="15" selection-start-column="25" selection-end-line="15" selection-end-column="25" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/SMTPForgedEmailClient-code/src/main/java/ch/heigvd/res/labs/smtp/data/GroupOfVictims.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="216">
+          <caret line="12" column="26" lean-forward="true" selection-start-line="12" selection-start-column="26" selection-end-line="12" selection-end-column="26" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/SMTPForgedEmailClient-code/src/main/java/ch/heigvd/res/labs/smtp/net/protocol/SMTPServerProtocol.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="108">
+          <caret line="6" column="13" lean-forward="false" selection-start-line="6" selection-start-column="13" selection-end-line="6" selection-end-column="13" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/SMTPForgedEmailClient-code/src/main/java/ch/heigvd/res/labs/smtp/net/client/ISMTPClient.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1368">
+          <caret line="78" column="42" lean-forward="true" selection-start-line="78" selection-start-column="42" selection-end-line="78" selection-end-column="42" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/SMTPForgedEmailClient-code/src/main/java/ch/heigvd/res/labs/smtp/net/client/SMTPClientImpl.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1944">
           <caret line="114" column="25" lean-forward="true" selection-start-line="114" selection-start-column="25" selection-end-line="114" selection-end-column="25" />
@@ -464,17 +504,17 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/SMTPProtocolClient-code/src/main/java/ch/heigvd/res/labs/smtp/SMTPClient.java">
+    <entry file="file://$PROJECT_DIR$/SMTPForgedEmailClient-code/src/main/java/ch/heigvd/res/labs/smtp/SMTPClient.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="90">
           <caret line="7" column="0" lean-forward="true" selection-start-line="7" selection-start-column="0" selection-end-line="7" selection-end-column="0" />
           <folding>
-            <element signature="imports" expanded="true" />
+            <element signature="imports" expanded="false" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/SMTPProtocolClient-code/src/main/java/ch/heigvd/res/labs/smtp/net/protocol/SMTPClientProtocol.java">
+    <entry file="file://$PROJECT_DIR$/SMTPForgedEmailClient-code/src/main/java/ch/heigvd/res/labs/smtp/net/protocol/SMTPClientProtocol.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="306">
           <caret line="17" column="0" lean-forward="true" selection-start-line="17" selection-start-column="0" selection-end-line="17" selection-end-column="0" />
@@ -483,25 +523,25 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/SMTPProtocolClient-code/src/main/java/ch/heigvd/res/labs/smtp/net/protocol/SMTPProtocol.java" />
-    <entry file="file://$PROJECT_DIR$/SMTPProtocolClient-code/src/main/java/ch/heigvd/res/labs/smtp/SMTPClient.java">
+    <entry file="file://$PROJECT_DIR$/SMTPForgedEmailClient-code/src/main/java/ch/heigvd/res/labs/smtp/SMTPClient.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="180">
+        <state relative-caret-position="270">
           <caret line="22" column="32" lean-forward="false" selection-start-line="22" selection-start-column="32" selection-end-line="22" selection-end-column="32" />
           <folding>
-            <element signature="imports" expanded="true" />
+            <element signature="imports" expanded="false" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/SMTPProtocolClient-code/src/main/java/ch/heigvd/res/labs/smtp/net/protocol/SMTPClientProtocol.java">
+    <entry file="file://$PROJECT_DIR$/SMTPForgedEmailClient-code/src/main/java/ch/heigvd/res/labs/smtp/net/protocol/SMTPClientProtocol.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="109">
+        <state relative-caret-position="270">
           <caret line="15" column="65" lean-forward="false" selection-start-line="15" selection-start-column="65" selection-end-line="15" selection-end-column="65" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/SMTPProtocolClient-code/src/main/java/ch/heigvd/res/labs/smtp/net/protocol/SMTPServerProtocol.java">
+    <entry file="file://$PROJECT_DIR$/SMTPForgedEmailClient-code/src/main/java/ch/heigvd/res/labs/smtp/net/protocol/SMTPServerProtocol.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="108">
           <caret line="6" column="13" lean-forward="false" selection-start-line="6" selection-start-column="13" selection-end-line="6" selection-end-column="13" />
@@ -509,9 +549,9 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/SMTPProtocolClient-code/src/main/java/ch/heigvd/res/labs/smtp/net/client/SMTPClientImpl.java">
+    <entry file="file://$PROJECT_DIR$/SMTPForgedEmailClient-code/src/main/java/ch/heigvd/res/labs/smtp/net/client/SMTPClientImpl.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-161">
+        <state relative-caret-position="648">
           <caret line="43" column="0" lean-forward="false" selection-start-line="43" selection-start-column="0" selection-end-line="43" selection-end-column="0" />
           <folding>
             <element signature="imports" expanded="true" />
@@ -519,36 +559,100 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/SMTPProtocolClient-code/src/main/java/ch/heigvd/res/labs/smtp/net/client/ISMTPClient.java">
+    <entry file="file://$PROJECT_DIR$/SMTPForgedEmailClient-code/src/main/java/ch/heigvd/res/labs/smtp/net/client/ISMTPClient.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="271">
-          <caret line="78" column="42" lean-forward="true" selection-start-line="78" selection-start-column="42" selection-end-line="78" selection-end-column="42" />
+        <state relative-caret-position="1368">
+          <caret line="78" column="42" lean-forward="false" selection-start-line="78" selection-start-column="42" selection-end-line="78" selection-end-column="42" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/SMTPProtocolClient-code/src/main/java/ch/heigvd/res/labs/smtp/data/Victim.java">
+    <entry file="file://$PROJECT_DIR$/SMTPForgedEmailClient-code/src/main/java/ch/heigvd/res/labs/smtp/data/Victim.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="360">
-          <caret line="20" column="4" lean-forward="true" selection-start-line="20" selection-start-column="4" selection-end-line="20" selection-end-column="25" />
+          <caret line="20" column="4" lean-forward="false" selection-start-line="20" selection-start-column="4" selection-end-line="20" selection-end-column="25" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/SMTPProtocolClient-code/src/main/java/ch/heigvd/res/labs/smtp/data/ForgedEmail.java">
+    <entry file="file://$PROJECT_DIR$/SMTPForgedEmailClient-code/src/main/java/ch/heigvd/res/labs/smtp/data/GroupOfVictims.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="414">
+          <caret line="23" column="0" lean-forward="false" selection-start-line="23" selection-start-column="0" selection-end-line="23" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/SMTPForgedEmailClient-build.iml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/SMTPForgedEmailClient-code/pom.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-517">
+          <caret line="4" column="37" lean-forward="false" selection-start-line="4" selection-start-column="37" selection-end-line="4" selection-end-column="37" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/SMTPForgedEmailClient-code/SMTPProtocolClient-code.iml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/SMTPForgedEmailClient-test/pom.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-229">
+          <caret line="36" column="45" lean-forward="false" selection-start-line="36" selection-start-column="45" selection-end-line="36" selection-end-column="45" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/labo03.iml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/.idea/vcs.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pom.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="162">
+          <caret line="9" column="0" lean-forward="true" selection-start-line="9" selection-start-column="0" selection-end-line="9" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/.idea/workspace.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/SMTPForgedEmailClient-code/src/main/java/ch/heigvd/res/labs/smtp/data/ForgedEmail.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="270">
-          <caret line="15" column="25" lean-forward="false" selection-start-line="15" selection-start-column="25" selection-end-line="15" selection-end-column="25" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/SMTPProtocolClient-code/src/main/java/ch/heigvd/res/labs/smtp/data/GroupOfVictims.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="342">
-          <caret line="19" column="57" lean-forward="false" selection-start-line="19" selection-start-column="57" selection-end-line="19" selection-end-column="57" />
+          <caret line="15" column="25" lean-forward="true" selection-start-line="15" selection-start-column="25" selection-end-line="15" selection-end-column="25" />
           <folding />
         </state>
       </provider>

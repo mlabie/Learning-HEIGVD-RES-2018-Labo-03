@@ -6,12 +6,14 @@
         <sourceOutputDir name="target/generated-sources/annotations" />
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
+        <module name="SMTPForgedEmailClient-build" />
         <module name="SMTPProtocolClient-build" />
         <module name="SMTPProtocolClient-code" />
         <module name="SMTPProtocolClient-test" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
+      <module name="SMTPForgedEmailClient-build" target="1.5" />
       <module name="SMTPProtocolClient-build" target="1.5" />
       <module name="SMTPProtocolClient-code" target="1.7" />
       <module name="SMTPProtocolClient-test" target="1.7" />
