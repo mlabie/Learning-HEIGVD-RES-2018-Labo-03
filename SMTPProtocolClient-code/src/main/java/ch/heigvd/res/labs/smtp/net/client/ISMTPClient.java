@@ -78,6 +78,6 @@ public interface ISMTPClient {
      * @param text
      * @return the response of the server.
      */
-    public String sendMail(String mail_from, String mail_to, String subject, String text) throws IOException;
+    public void sendMail(String mail_from, String mail_to, String subject, String text) throws IOException;
 
 }

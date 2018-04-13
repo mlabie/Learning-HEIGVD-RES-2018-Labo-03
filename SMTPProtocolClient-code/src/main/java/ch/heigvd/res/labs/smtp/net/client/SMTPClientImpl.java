@@ -3,6 +3,7 @@ package ch.heigvd.res.labs.smtp.net.client;
 import java.io.*;
 import java.net.Socket;
 import java.util.concurrent.TimeoutException;
+import java.util.logging.Level;
 import java.util.logging.Logger;
 
 import ch.heigvd.res.labs.smtp.net.protocol.SMTPClientProtocol;
@@ -24,13 +25,15 @@ public class SMTPClientImpl implements ISMTPClient{
     protected String answer;
 
 
-    SMTPClientImpl(){
-    }
+    public SMTPClientImpl(){}
+
 
     @Override
     public void connect(String server, int port) throws IOException{
         if(isConnected())
             this.disconnect();
+
+        LOG.log(Level.INFO, "Connecting on {0}", server+":"+port);
 
         socket = new Socket(server, port);
         is     = socket.getInputStream();
@@ -39,21 +42,22 @@ public class SMTPClientImpl implements ISMTPClient{
         br = new BufferedReader(new InputStreamReader(is));
         pw = new PrintWriter(new OutputStreamWriter(os), true);
 
-        // The server sends us "Hello. Online HELP is available. Will you find it?".
-        // We ignore it.
-        answer = br.readLine(); // connected....
-        answer = br.readLine(); // Escape...
-        answer = br.readLine(); // 220...
-
+        LOG.log(Level.INFO, br.readLine());
     }
 
 
     @Override
     public void disconnect() throws IOException{
-        if(!isConnected())
+        if(!isConnected()){
+            LOG.log(Level.INFO, "Client not connected.");
             return;
+        }
 
         pw.println(SMTPClientProtocol.CMD_QUIT);  // quit
+
+        LOG.log(Level.INFO, SMTPClientProtocol.CMD_QUIT);
+        //LOG.log(Level.INFO, br.readLine());
+
         pw.close();
         br.close();
         is.close();
@@ -80,26 +84,36 @@ public class SMTPClientImpl implements ISMTPClient{
 
         int counter = 0;
         pw.println(SMTPClientProtocol.CMD_EHLO + " " + helo);
+        LOG.log(Level.INFO, SMTPClientProtocol.CMD_EHLO + " " + helo);
 
-        while(!answer.startsWith(SMTPClientProtocol.RESPONSE_250_SPACE) && (++counter < MAX_COUNTER_VAL));
+        do{
+            answer = br.readLine();
+            LOG.log(Level.INFO, answer);
+        }while (!answer.startsWith(SMTPClientProtocol.RESPONSE_250_SPACE) && (++counter < MAX_COUNTER_VAL));
+
 
         if(counter == MAX_COUNTER_VAL)
             throw new TimeoutException();
-
     }
 
 
     @Override
     public void mailFrom(String mail_from) throws IOException{
         pw.println(SMTPClientProtocol.CMD_MAIL_FROM + mail_from);  // MAIL_FROM
+        LOG.log(Level.INFO, SMTPClientProtocol.CMD_MAIL_FROM + mail_from);
+
         answer = br.readLine(); // read answer...
+        LOG.log(Level.INFO, answer);
     }
 
 
     @Override
     public boolean mailTo(String mail_to) throws IOException{
         pw.println(SMTPClientProtocol.CMD_RCPT_TO + mail_to);
+        LOG.log(Level.INFO, SMTPClientProtocol.CMD_RCPT_TO + mail_to);
         answer = br.readLine(); // read answer...
+        LOG.log(Level.INFO, answer);
+
 
         return answer.equals(SMTPClientProtocol.RESPONSE_250_SPACE + SMTPClientProtocol.RESPONSE_ACCEPTED);
     }
@@ -107,8 +121,13 @@ public class SMTPClientImpl implements ISMTPClient{
 
 
     @Override
-    public String sendMail(String mail_from, String mail_to, String subject, String text) throws IOException{
-        
+    public void sendMail(String mail_from, String mail_to, String subject, String text) throws IOException{
+
+        pw.println(SMTPClientProtocol.CMD_DATA);
+        LOG.log(Level.INFO, SMTPClientProtocol.CMD_DATA);
+        answer = br.readLine();
+        LOG.log(Level.INFO, answer);
+
         pw.println(SMTPClientProtocol.MAIL_FROM + mail_from);
         pw.println(SMTPClientProtocol.MAIL_TO + mail_to);
         pw.println(SMTPClientProtocol.MAIL_SUBJECT + subject);
@@ -116,6 +135,6 @@ public class SMTPClientImpl implements ISMTPClient{
         pw.println(text);
         pw.println(SMTPClientProtocol.ENDING_CHARACTER);
 
-        return br.readLine(); // read answer...;
+        LOG.log(Level.INFO, br.readLine());
     }
 }

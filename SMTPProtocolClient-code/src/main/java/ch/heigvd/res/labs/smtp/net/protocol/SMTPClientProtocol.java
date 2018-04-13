@@ -13,7 +13,7 @@ public class SMTPClientProtocol {
     public final static String CMD_MAIL_FROM            = "MAIL FROM: ";
     public final static String CMD_RCPT_TO              = "RCPT TO: ";
     public final static String CMD_DATA                 = "DATA";
-    public final static String CMD_QUIT                 = "quit";
+    public final static String CMD_QUIT                 = "QUIT";
 
 
     public final static String RESPONSE_250_SPACE       = "250 ";
