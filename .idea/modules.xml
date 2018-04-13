@@ -2,9 +2,9 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
+      <module fileurl="file://$PROJECT_DIR$/SMTPForgedEmailClient-code/SMTPForgedEmailClient.iml" filepath="$PROJECT_DIR$/SMTPForgedEmailClient-code/SMTPForgedEmailClient.iml" />
+      <module fileurl="file://$PROJECT_DIR$/SMTPForgedEmailClient-test/SMTPForgedEmailClient.iml" filepath="$PROJECT_DIR$/SMTPForgedEmailClient-test/SMTPForgedEmailClient.iml" />
       <module fileurl="file://$PROJECT_DIR$/SMTPForgedEmailClient-build.iml" filepath="$PROJECT_DIR$/SMTPForgedEmailClient-build.iml" />
-      <module fileurl="file://$PROJECT_DIR$/SMTPForgedEmailClient-code/SMTPProtocolClient-code.iml" filepath="$PROJECT_DIR$/SMTPForgedEmailClient-code/SMTPProtocolClient-code.iml" />
-      <module fileurl="file://$PROJECT_DIR$/SMTPForgedEmailClient-test/SMTPProtocolClient-test.iml" filepath="$PROJECT_DIR$/SMTPForgedEmailClient-test/SMTPProtocolClient-test.iml" />
     </modules>
   </component>
 </project>
