@@ -18,5 +18,19 @@ public class Victim {
 
     //TODO : Getter et Setter
 
-    /* à compléter.... */
+    public String getEmailAddress(){
+        return emailAddress;
+    }
+
+    public void setEmailAddress(String email){
+        emailAddress = email;
+    }
+
+    public String getSmtpServer(){
+        return smtpServer;
+    }
+
+    public void setSmtpServer(String server){
+        smtpServer = server;
+    }
 }
