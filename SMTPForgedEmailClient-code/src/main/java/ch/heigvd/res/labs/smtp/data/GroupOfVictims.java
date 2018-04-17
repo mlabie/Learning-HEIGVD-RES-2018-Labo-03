@@ -55,46 +55,12 @@ public class GroupOfVictims {
     }
 
     public void setVictims(ArrayList<Victim> newVictims){
-        for(int i = 0; i < newVictims.size(); i++){
+        for(int i = 0; i < newVictims.size(); i++)
             victims.set(i, newVictims.get(i).clone());
-            LOG.log(Level.SEVERE, "Cannot clone victim no " + i);
-        }
     }
 
     public void addVictims(Victim... newVictims){
         for(int i = 0; i < newVictims.length; i++)
             victims.add(newVictims[i]);
     }
-
-    // TODO : Déplacer dans Prank.java
-    public void prankThemAll(ForgedEmail mail){
-        if(sender == null || victims.size() < 2){
-            LOG.log(Level.SEVERE, "You need to have 1 sender and 2 receivers at least");
-            return;
-        }
-
-        ISMTPClient client = new SMTPClientImpl();
-        try {
-            client.connect("mailcl0.heig-vd.ch", SMTPClientProtocol.DEFAULT_PORT);
-            client.EHLO("test");
-
-            for(int i = 0;  i < victims.size(); i++){
-                client.mailFrom(sender.getEmailAddress());
-                if (client.mailTo(victims.get(i).getEmailAddress()))
-                    client.sendMail(sender.getEmailAddress(),
-                                    victims.get(i).getEmailAddress(),
-                                    mail.getSubject(),
-                                    mail.getText());
-            }
-
-            client.disconnect();
-        }
-        catch (IOException ex){
-            Logger.getLogger(SMTPClient.class.getName()).log(Level.SEVERE, ex.getMessage(), ex);
-        }
-        catch (TimeoutException ex){
-            Logger.getLogger(SMTPClient.class.getName()).log(Level.SEVERE, ex.getMessage(), ex);
-        }
-    }
-
 }
