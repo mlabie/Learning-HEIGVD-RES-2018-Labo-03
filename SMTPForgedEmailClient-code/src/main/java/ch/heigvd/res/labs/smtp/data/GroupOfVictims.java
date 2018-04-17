@@ -38,7 +38,7 @@ public class GroupOfVictims {
     }
 
     public Victim getSender(){
-        return new Victim(sender.getEmailAddress(), sender.getSmtpServer());
+        return sender.clone();
     }
 
     public void setSender(Victim newSender){
@@ -47,13 +47,18 @@ public class GroupOfVictims {
     }
 
     public ArrayList<Victim> getVictims(){
-        // TODO : Test si renvoie une copie
-        return victims;
+        ArrayList<Victim> clone = new ArrayList<Victim>(victims.size());
+        for(Victim victim : victims)
+            clone.add(victim.clone());
+
+        return clone;
     }
 
-    public void setVictims(ArrayList<Victim> victims){
-        // TODO : Test si fait une copie
-        this.victims = victims;
+    public void setVictims(ArrayList<Victim> newVictims){
+        for(int i = 0; i < newVictims.size(); i++){
+            victims.set(i, newVictims.get(i).clone());
+            LOG.log(Level.SEVERE, "Cannot clone victim no " + i);
+        }
     }
 
     public void addVictims(Victim... newVictims){

@@ -6,7 +6,7 @@ package ch.heigvd.res.labs.smtp.data;
  *
  * @author David Jaquet & Marc Labie
  */
-public class Victim {
+public class Victim implements Cloneable {
 
     private String emailAddress;
     private String smtpServer;
@@ -32,5 +32,16 @@ public class Victim {
 
     public void setSmtpServer(String server){
         smtpServer = server;
+    }
+
+    @Override
+    public Victim clone() {
+        try {
+            return (Victim) super.clone();
+        } catch (CloneNotSupportedException error) {
+            System.out.println(error.getMessage());
+        }
+
+        return null;
     }
 }
