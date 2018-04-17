@@ -30,7 +30,6 @@ public class SMTPClient {
                             "Je t'aime <3");
             }
 
-
             client.disconnect();
 
 

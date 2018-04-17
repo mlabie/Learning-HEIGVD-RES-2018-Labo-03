@@ -1,6 +1,17 @@
 package ch.heigvd.res.labs.smtp.data;
 
+import java.io.IOException;
+import java.util.ArrayList;
 import java.util.List;
+import java.util.logging.Level;
+import java.util.logging.Logger;
+
+import ch.heigvd.res.labs.smtp.SMTPClient;
+import ch.heigvd.res.labs.smtp.net.client.ISMTPClient;
+import ch.heigvd.res.labs.smtp.net.client.SMTPClientImpl;
+import ch.heigvd.res.labs.smtp.net.protocol.SMTPClientProtocol;
+
+import java.util.concurrent.TimeoutException;
 
 /**
  * Group of vitcims to whom a forged mail will be sent.
@@ -11,7 +22,7 @@ import java.util.List;
 public class GroupOfVictims {
 
     private Victim sender;
-    private List<Victim> victims;
+    private ArrayList<Victim> victims;
     private static final Logger LOG = Logger.getLogger(GroupOfVictims.class.getName());
 
     //TODO : implement the class respecting the condition (1 sender and 2 receiver at least).
@@ -21,7 +32,7 @@ public class GroupOfVictims {
     /* Reprend mon exemple du main pour envoyer les mails.... */
     /* à compléter.... */
 
-    public GroupOfVictims(Victim sender, List<Victim> victims){
+    public GroupOfVictims(Victim sender, ArrayList<Victim> victims){
         this.sender = sender;
         this.victims = victims;
     }
@@ -35,12 +46,12 @@ public class GroupOfVictims {
         sender.setSmtpServer(newSender.getSmtpServer());
     }
 
-    public List<Victim> getVictims(){
+    public ArrayList<Victim> getVictims(){
         // TODO : Test si renvoie une copie
         return victims;
     }
 
-    public void setVictims(List<Victim> victims){
+    public void setVictims(ArrayList<Victim> victims){
         // TODO : Test si fait une copie
         this.victims = victims;
     }
@@ -52,7 +63,7 @@ public class GroupOfVictims {
 
     public void prankThemAll(ForgedEmail mail){
         if(sender == null || victims.size() < 2){
-            LOG.log(Level.INFO, "You need to have 1 sender and 2 receivers at least");
+            LOG.log(Level.SEVERE, "You need to have 1 sender and 2 receivers at least");
             return;
         }
 
@@ -63,11 +74,11 @@ public class GroupOfVictims {
 
             for(int i = 0;  i < 1; i++){
                 client.mailFrom(sender.getEmailAddress());
-                if (client.mailTo(victims[i].getEmailAddress()))
+                if (client.mailTo(victims.get(i).getEmailAddress()))
                     client.sendMail(sender.getEmailAddress(),
-                                    victims[i].getEmailAddress()),
+                                    victims.get(i).getEmailAddress(),
                                     mail.getSubject(),
-                                    mail.getText();
+                                    mail.getText());
             }
 
             client.disconnect();
