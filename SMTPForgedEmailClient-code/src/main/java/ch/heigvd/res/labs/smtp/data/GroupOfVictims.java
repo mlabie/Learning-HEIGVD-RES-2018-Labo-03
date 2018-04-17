@@ -61,6 +61,7 @@ public class GroupOfVictims {
             victims.add(newVictims[i]);
     }
 
+    // TODO : Déplacer dans Prank.java
     public void prankThemAll(ForgedEmail mail){
         if(sender == null || victims.size() < 2){
             LOG.log(Level.SEVERE, "You need to have 1 sender and 2 receivers at least");
@@ -72,7 +73,7 @@ public class GroupOfVictims {
             client.connect("mailcl0.heig-vd.ch", SMTPClientProtocol.DEFAULT_PORT);
             client.EHLO("test");
 
-            for(int i = 0;  i < 1; i++){
+            for(int i = 0;  i < victims.size(); i++){
                 client.mailFrom(sender.getEmailAddress());
                 if (client.mailTo(victims.get(i).getEmailAddress()))
                     client.sendMail(sender.getEmailAddress(),
