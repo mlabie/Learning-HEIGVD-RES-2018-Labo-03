@@ -32,7 +32,7 @@ public class SMTPClient {
             List<ForgedEmail> forgedEmails = MailReader.getForgedEMail("message.utf8");
 
             int nbGroup         = config.getNumberOfGroup();
-            int nbPeopleInGroup = victims.size() / 10;
+            int nbPeopleInGroup = victims.size() / nbGroup;
 
             if(nbPeopleInGroup < 3){
                 Logger.getLogger(SMTPClient.class.getName()).log(Level.SEVERE, "Group too small !");
