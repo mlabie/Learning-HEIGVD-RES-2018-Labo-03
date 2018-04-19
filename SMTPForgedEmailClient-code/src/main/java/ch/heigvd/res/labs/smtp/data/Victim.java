@@ -10,6 +10,10 @@ public class Victim implements Cloneable {
 
     private String emailAddress;
 
+    public Victim(){
+        emailAddress = "";
+    }
+
     /**
      * Constructor of the Class.
      *

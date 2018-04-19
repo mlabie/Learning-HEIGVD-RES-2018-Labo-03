@@ -21,6 +21,14 @@ public class GroupOfVictims {
 
     /**
      * Constructor of the class.
+     */
+    public GroupOfVictims(){
+        sender = new Victim();
+        victims = new ArrayList<Victim>();
+    }
+
+    /**
+     * Constructor of the class.
      * @param sender :      The victim that will be seen as the sender of the forged e-mail
      * @param victims :     The victims that will receive the e-mail from the sender.
      */

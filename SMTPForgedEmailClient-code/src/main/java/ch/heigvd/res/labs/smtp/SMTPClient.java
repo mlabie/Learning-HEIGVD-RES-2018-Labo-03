@@ -25,63 +25,43 @@ public class SMTPClient {
 
         System.setProperty("java.util.logging.SimpleFormatter.format", "%5$s %n");
 
-        /*ISMTPClient client = new SMTPClientImpl();
-        try {
-            client.connect("mailcl0.heig-vd.ch", SMTPClientProtocol.DEFAULT_PORT);
-            client.EHLO("test");
-            for(int i = 0;  i < 1; i++){
-                client.mailFrom("marc.labie@heig-vd.ch");
-                if (client.mailTo("david.jaquet@heig-vd.ch"))
-                    client.sendMail("marc.labie@heig-vd.ch",
-                            "david.jaquet@heig-vd.ch",
-                            "Si tu recois ce mail, c'est que mon client SMTP fonctionne !",
-                            "Je t'aime <3");
-            }
-
-            client.disconnect();
-
-
-        }catch (IOException ex){
-            Logger.getLogger(SMTPClient.class.getName()).log(Level.SEVERE, ex.getMessage(), ex);
-        }
-        catch (TimeoutException ex){
-            Logger.getLogger(SMTPClient.class.getName()).log(Level.SEVERE, ex.getMessage(), ex);
-        }*/
-
         try {
             ConfigurationReader config = new ConfigurationReader("config.properties");
 
             List<Victim> victims           = VictimReader.getVictims("victims.utf8");
             List<ForgedEmail> forgedEmails = MailReader.getForgedEMail("message.utf8");
 
-//            System.out.println(config.getSmtpServerAddress());
-//            System.out.println(config.getSmtpServerPort());
-//            System.out.println(config.getNumberOfGroup());
-//            System.out.println(config.getWitnessesToCC());
-//
-//            System.out.println();
-//            System.out.println();
-//
-//            for(Victim v : victims)
-//                System.out.println(v.getEmailAddress());
-//
-//            System.out.println();
-//            System.out.println();
+            int nbGroup         = config.getNumberOfGroup();
+            int nbPeopleInGroup = victims.size() / 10;
 
-            Victim sender = victims.remove(0);
-            GroupOfVictims group = new GroupOfVictims(sender, victims);
-
-            for(ForgedEmail email : forgedEmails){
-//                System.out.println(f.getSubject());
-//                System.out.println();
-//                System.out.println(f.getText());
-//                System.out.println();
-                Prank prank = new Prank(group, email, config.getSmtpServerAddress(), config.getSmtpServerPort(), config.getWitnessesToCC());
-                prank.prankThemAll();
+            if(nbPeopleInGroup < 3){
+                Logger.getLogger(SMTPClient.class.getName()).log(Level.SEVERE, "Group too small !");
+                return;
             }
 
+            if(forgedEmails.size() < 1){
+                Logger.getLogger(SMTPClient.class.getName()).log(Level.SEVERE, "Add at least 1 email !");
+                return;
+            }
 
-        }catch (IOException | IllegalArgumentException | TimeoutException ex){
+            ForgedEmail lastEmail = forgedEmails.remove(0);
+
+            for(int i = 0; i < nbGroup; i++) {
+                GroupOfVictims group = new GroupOfVictims();
+
+                group.setSender(victims.remove(0));
+
+                for(int j = 0; j < nbPeopleInGroup - 1; j++)
+                    group.addVictims(victims.remove(0));
+
+                Prank prank = new Prank(group, lastEmail, config.getSmtpServerAddress(), config.getSmtpServerPort(), config.getWitnessesToCC());
+                prank.prankThemAll();
+
+                if(forgedEmails.size() > 0)
+                    lastEmail = forgedEmails.remove(0);
+            }
+        }
+        catch (IOException | IllegalArgumentException | TimeoutException ex) {
             Logger.getLogger(SMTPClient.class.getName()).log(Level.SEVERE, ex.getMessage(), ex);
         }
 
