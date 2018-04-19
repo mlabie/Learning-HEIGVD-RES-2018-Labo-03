@@ -1,6 +1,8 @@
 package ch.heigvd.res.labs.smtp;
 
 import ch.heigvd.res.labs.smtp.data.ForgedEmail;
+import ch.heigvd.res.labs.smtp.data.GroupOfVictims;
+import ch.heigvd.res.labs.smtp.data.Prank;
 import ch.heigvd.res.labs.smtp.data.Victim;
 import ch.heigvd.res.labs.smtp.net.client.ISMTPClient;
 import ch.heigvd.res.labs.smtp.net.client.SMTPClientImpl;
@@ -47,35 +49,39 @@ public class SMTPClient {
         }*/
 
         try {
-            ConfigurationReader configurationReader = new ConfigurationReader("config.properties");
+            ConfigurationReader config = new ConfigurationReader("config.properties");
 
             List<Victim> victims           = VictimReader.getVictims("victims.utf8");
             List<ForgedEmail> forgedEmails = MailReader.getForgedEMail("message.utf8");
 
-            System.out.println(configurationReader.getSmtpServerAddress());
-            System.out.println(configurationReader.getSmtpServerPort());
-            System.out.println(configurationReader.getNumberOfGroup());
-            System.out.println(configurationReader.getWitnessesToCC());
+//            System.out.println(config.getSmtpServerAddress());
+//            System.out.println(config.getSmtpServerPort());
+//            System.out.println(config.getNumberOfGroup());
+//            System.out.println(config.getWitnessesToCC());
+//
+//            System.out.println();
+//            System.out.println();
+//
+//            for(Victim v : victims)
+//                System.out.println(v.getEmailAddress());
+//
+//            System.out.println();
+//            System.out.println();
 
+            Victim sender = victims.remove(0);
+            GroupOfVictims group = new GroupOfVictims(sender, victims);
 
-
-            System.out.println();
-            System.out.println();
-
-            for(Victim v : victims)
-                System.out.println(v.getEmailAddress());
-
-            System.out.println();
-            System.out.println();
-
-            for(ForgedEmail f : forgedEmails){
-                System.out.println(f.getSubject());
-                System.out.println();
-                System.out.println(f.getText());
-                System.out.println();
+            for(ForgedEmail email : forgedEmails){
+//                System.out.println(f.getSubject());
+//                System.out.println();
+//                System.out.println(f.getText());
+//                System.out.println();
+                Prank prank = new Prank(group, email, config.getSmtpServerAddress(), config.getSmtpServerPort(), config.getWitnessesToCC());
+                prank.prankThemAll();
             }
 
-        }catch (IOException | IllegalArgumentException /*| TimeoutException */ex){
+
+        }catch (IOException | IllegalArgumentException | TimeoutException ex){
             Logger.getLogger(SMTPClient.class.getName()).log(Level.SEVERE, ex.getMessage(), ex);
         }
 

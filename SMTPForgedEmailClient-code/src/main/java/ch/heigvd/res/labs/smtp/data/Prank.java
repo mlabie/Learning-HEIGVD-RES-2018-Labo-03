@@ -20,6 +20,7 @@ public class Prank {
     private GroupOfVictims group;
     private ForgedEmail    mail;
     private String         smtpServerAddress;
+    private String         witness;
     private int            smtpServerPort;
 
 
@@ -57,6 +58,24 @@ public class Prank {
 
 
     /**
+     * Constructor of the class
+     *
+     * @param group :               The group of vitcims
+     * @param mail :                The forged e-mail
+     * @param smtpServerAddress :   The SMTP server address
+     * @param smtpServerPort :      The SMTP server port
+     * @param witness :              The witness of the prank to CC
+     */
+    public Prank(GroupOfVictims group, ForgedEmail mail, String smtpServerAddress, int smtpServerPort, String witness){
+        this.group             = group;
+        this.mail              = mail;
+        this.smtpServerAddress = smtpServerAddress;
+        this.smtpServerPort    = smtpServerPort;
+        this.witness           = witness;
+    }
+
+
+    /**
      * Send the forged e-mail to the group of victims.
      * @throws IOException
      * @throws TimeoutException
@@ -67,7 +86,6 @@ public class Prank {
             return;
         }
 
-
         List<Victim> victims = group.getVictims();
         Victim       sender  = group.getSender();
         ISMTPClient  client  = new SMTPClientImpl();
@@ -75,7 +93,6 @@ public class Prank {
 
         client.connect(smtpServerAddress, smtpServerPort);
         client.EHLO("test");
-
 
         // Sends 1 forged e-mail for each victim.
         for(Victim victim : victims){
