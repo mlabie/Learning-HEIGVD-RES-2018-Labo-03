@@ -1,56 +1,94 @@
 package ch.heigvd.res.labs.smtp.data;
 
-import ch.heigvd.res.labs.smtp.SMTPClient;
 import ch.heigvd.res.labs.smtp.net.client.ISMTPClient;
 import ch.heigvd.res.labs.smtp.net.client.SMTPClientImpl;
 import ch.heigvd.res.labs.smtp.net.protocol.SMTPClientProtocol;
 
 import java.io.IOException;
-import java.util.ArrayList;
+import java.util.List;
 import java.util.concurrent.TimeoutException;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 
+/**
+ * Class that implements an e-mail prank.
+ *
+ * @author David Jaquet & Marc Labie
+ */
 public class Prank {
+
     private GroupOfVictims group;
-    private ForgedEmail mail;
+    private ForgedEmail    mail;
+    private String         smtpServerAddress;
+    private int            smtpServerPort;
+
 
     private static final Logger LOG = Logger.getLogger(Prank.class.getName());
 
-    Prank(GroupOfVictims group, ForgedEmail mail){
-        this.group = group;
-        this.mail = mail;
+
+    /**
+     * Constructor of the class
+     *
+     * set the smtpServerPort to the Default SMTP Protocol port, which is 25.
+     *
+     * @param group :               The group of vitcims
+     * @param mail :                The forged e-mail
+     * @param smtpServerAddress :   The SMTP server address
+     */
+    public Prank(GroupOfVictims group, ForgedEmail mail, String smtpServerAddress){
+        this(group, mail, smtpServerAddress, SMTPClientProtocol.DEFAULT_PORT);
     }
 
-    // TODO : Getters & Setters
 
-    public void prankThemAll(ForgedEmail mail){
+    /**
+     * Constructor of the class
+     *
+     * @param group :               The group of vitcims
+     * @param mail :                The forged e-mail
+     * @param smtpServerAddress :   The SMTP server address
+     * @param smtpServerPort :      The SMTP server port
+     */
+    public Prank(GroupOfVictims group, ForgedEmail mail, String smtpServerAddress, int smtpServerPort){
+        this.group             = group;
+        this.mail              = mail;
+        this.smtpServerAddress = smtpServerAddress;
+        this.smtpServerPort    = smtpServerPort;
+    }
+
+
+    /**
+     * Send the forged e-mail to the group of victims.
+     * @throws IOException
+     * @throws TimeoutException
+     */
+    public void prankThemAll() throws IOException, TimeoutException{
         if(group.getSender() == null || group.getVictims().size() < 2){
             LOG.log(Level.SEVERE, "You need to have 1 sender and 2 receivers at least");
             return;
         }
 
-        ArrayList<Victim> victims = group.getVictims();
-        Victim sender = group.getSender();
 
-        ISMTPClient client = new SMTPClientImpl();
-        try {
-            client.connect("mailcl0.heig-vd.ch", SMTPClientProtocol.DEFAULT_PORT);
-            client.EHLO("test");
+        List<Victim> victims = group.getVictims();
+        Victim       sender  = group.getSender();
+        ISMTPClient  client  = new SMTPClientImpl();
 
-            for(int i = 0;  i < victims.size(); i++){
-                client.mailFrom(sender.getEmailAddress());
-                if (client.mailTo(victims.get(i).getEmailAddress()))
-                    client.sendMail(sender.getEmailAddress(),
-                                    victims.get(i).getEmailAddress(),
-                                    mail.getSubject(),
-                                    mail.getText());
-            }
 
-            client.disconnect();
+        client.connect(smtpServerAddress, smtpServerPort);
+        client.EHLO("test");
+
+
+        // Sends 1 forged e-mail for each victim.
+        for(Victim victim : victims){
+
+            client.mailFrom(sender.getEmailAddress());
+
+            if (client.mailTo(victim.getEmailAddress()))
+                client.sendMail(sender.getEmailAddress(),
+                                victim.getEmailAddress(),
+                                mail.getSubject(),
+                                mail.getText());
         }
-        catch (IOException | TimeoutException ex){
-            LOG.log(Level.SEVERE, ex.getMessage(), ex);
-        }
+
+        client.disconnect();
     }
 }

@@ -9,14 +9,16 @@ package ch.heigvd.res.labs.smtp.data;
 public class Victim implements Cloneable {
 
     private String emailAddress;
-    private String smtpServer;
 
-    public Victim(String emailAddress, String smtpServer){
+    /**
+     * Constructor of the Class.
+     *
+     * @param emailAddress :    The e-mail address of the victim.
+     */
+    public Victim(String emailAddress){
         this.emailAddress = emailAddress;
-        this.smtpServer   = smtpServer;
     }
 
-    //TODO : Getter et Setter
 
     public String getEmailAddress(){
         return emailAddress;
@@ -24,14 +26,6 @@ public class Victim implements Cloneable {
 
     public void setEmailAddress(String email){
         emailAddress = email;
-    }
-
-    public String getSmtpServer(){
-        return smtpServer;
-    }
-
-    public void setSmtpServer(String server){
-        smtpServer = server;
     }
 
     @Override

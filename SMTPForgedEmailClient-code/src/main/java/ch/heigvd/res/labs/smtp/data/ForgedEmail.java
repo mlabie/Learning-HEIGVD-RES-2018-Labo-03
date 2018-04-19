@@ -6,40 +6,21 @@ package ch.heigvd.res.labs.smtp.data;
  * @author David Jaquet & Marc Labie
  */
 public class ForgedEmail {
-    //private String mailFrom;          // Maybe not necessary
-    //private String rcptTo;            // Maybe not necessary
+
     private String subject;
     private String text;
 
-    //TODO : Implements the class with constructor, getter and setters.
 
+    /**
+     * Constuctor of the class.
+     *
+     * @param subject :     The subject of the forged E-mail
+     * @param text :        The text in the e-mail
+     */
     public ForgedEmail(String subject, String text){
         this.subject = subject;
         this.text = text;
     }
-
-//    public ForgedEmail(String mailFrom, String rcptTo, String subject, String text){
-//        this.mailFrom = mailFrom;
-//        this.rcptTo = rcptTo;
-//        this.subject = subject;
-//        this.text = text;
-//    }
-//
-//    public String getFrom(){
-//        return mailFrom;
-//    }
-//
-//    public void setFrom(String from){
-//        mailFrom = from;
-//    }
-//
-//    public String getRcpt(){
-//        return rcptTo;
-//    }
-//
-//    public void setRcpt(String rcpt){
-//        rcptTo = rcpt
-//    }
 
     public String getSubject(){
         return subject;

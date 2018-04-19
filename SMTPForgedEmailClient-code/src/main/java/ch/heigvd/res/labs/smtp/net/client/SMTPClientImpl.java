@@ -7,22 +7,25 @@ import java.util.logging.Level;
 import java.util.logging.Logger;
 
 import ch.heigvd.res.labs.smtp.net.protocol.SMTPClientProtocol;
-import org.omg.CORBA.TIMEOUT;
 
+/**
+ * Implementation of the SMTP Protocol Client.
+ * @author David Jaquet & Marc Labie
+ */
 public class SMTPClientImpl implements ISMTPClient{
 
     private static final Logger LOG = Logger.getLogger(SMTPClientImpl.class.getName());
 
     private final int MAX_COUNTER_VAL =  1000;
 
-    protected Socket       socket;
-    protected InputStream  is;
-    protected OutputStream os;
+    private Socket       socket;
+    private InputStream  is;
+    private OutputStream os;
 
-    protected BufferedReader br;
-    protected PrintWriter    pw;
+    private BufferedReader br;
+    private PrintWriter    pw;
 
-    protected String answer;
+    private String answer;
 
 
     public SMTPClientImpl(){}
@@ -115,7 +118,7 @@ public class SMTPClientImpl implements ISMTPClient{
         LOG.log(Level.INFO, answer);
 
 
-        return answer.equals(SMTPClientProtocol.RESPONSE_250_SPACE + SMTPClientProtocol.RESPONSE_ACCEPTED);
+        return answer.startsWith(SMTPClientProtocol.RESPONSE_250_SPACE);
     }
 
 
