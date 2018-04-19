@@ -86,7 +86,7 @@ public class SMTPClientImpl implements ISMTPClient{
 
 
         int counter = 0;
-        pw.println(SMTPClientProtocol.CMD_EHLO + " " + helo);
+        pw.println(SMTPClientProtocol.CMD_EHLO + " " + helo + SMTPClientProtocol.CARRIAGE_RETURN);
         LOG.log(Level.INFO, SMTPClientProtocol.CMD_EHLO + " " + helo);
 
         do{
@@ -102,7 +102,7 @@ public class SMTPClientImpl implements ISMTPClient{
 
     @Override
     public void mailFrom(String mail_from) throws IOException{
-        pw.println(SMTPClientProtocol.CMD_MAIL_FROM + mail_from);  // MAIL_FROM
+        pw.println(SMTPClientProtocol.CMD_MAIL_FROM + mail_from + SMTPClientProtocol.CARRIAGE_RETURN);  // MAIL_FROM
         LOG.log(Level.INFO, SMTPClientProtocol.CMD_MAIL_FROM + mail_from);
 
         answer = br.readLine(); // read answer...
@@ -112,7 +112,7 @@ public class SMTPClientImpl implements ISMTPClient{
 
     @Override
     public boolean mailTo(String mail_to) throws IOException{
-        pw.println(SMTPClientProtocol.CMD_RCPT_TO + mail_to);
+        pw.println(SMTPClientProtocol.CMD_RCPT_TO + mail_to + SMTPClientProtocol.CARRIAGE_RETURN);
         LOG.log(Level.INFO, SMTPClientProtocol.CMD_RCPT_TO + mail_to);
         answer = br.readLine(); // read answer...
         LOG.log(Level.INFO, answer);
@@ -126,17 +126,25 @@ public class SMTPClientImpl implements ISMTPClient{
     @Override
     public void sendMail(String mail_from, String mail_to, String subject, String text) throws IOException{
 
-        pw.println(SMTPClientProtocol.CMD_DATA);
+        pw.println(SMTPClientProtocol.CMD_DATA + SMTPClientProtocol.CARRIAGE_RETURN);
         LOG.log(Level.INFO, SMTPClientProtocol.CMD_DATA);
         answer = br.readLine();
         LOG.log(Level.INFO, answer);
 
-        pw.println(SMTPClientProtocol.MAIL_FROM + mail_from);
-        pw.println(SMTPClientProtocol.MAIL_TO + mail_to);
-        pw.println(SMTPClientProtocol.MAIL_SUBJECT + subject);
-        pw.println("\n");
-        pw.println(text);
-        pw.println(SMTPClientProtocol.ENDING_CHARACTER);
+        pw.println(SMTPClientProtocol.MAIL_FROM + mail_from + SMTPClientProtocol.CARRIAGE_RETURN);
+        pw.println(SMTPClientProtocol.MAIL_TO + mail_to + SMTPClientProtocol.CARRIAGE_RETURN);
+        pw.println(SMTPClientProtocol.MAIL_SUBJECT + subject + SMTPClientProtocol.CARRIAGE_RETURN);
+        pw.println("\n" + SMTPClientProtocol.CARRIAGE_RETURN);
+        pw.println(text + SMTPClientProtocol.CARRIAGE_RETURN);
+        pw.println(SMTPClientProtocol.ENDING_CHARACTER + SMTPClientProtocol.CARRIAGE_RETURN);
+
+        LOG.log(Level.INFO, SMTPClientProtocol.MAIL_FROM + mail_from);
+        LOG.log(Level.INFO, SMTPClientProtocol.MAIL_TO + mail_to);
+        LOG.log(Level.INFO, SMTPClientProtocol.MAIL_SUBJECT + subject);
+        LOG.log(Level.INFO, "\n");
+        LOG.log(Level.INFO, text);
+        LOG.log(Level.INFO, SMTPClientProtocol.ENDING_CHARACTER );
+
 
         LOG.log(Level.INFO, br.readLine());
     }

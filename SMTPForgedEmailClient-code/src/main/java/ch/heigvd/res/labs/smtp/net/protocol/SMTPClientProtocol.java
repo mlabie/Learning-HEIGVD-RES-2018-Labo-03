@@ -24,6 +24,8 @@ public class SMTPClientProtocol {
     public final static String MAIL_SUBJECT             = "Subject: ";
     public final static String ENDING_CHARACTER         = ".";
 
+    public final static char   CARRIAGE_RETURN          =  '\r';
+
 
     public final static String[] SUPPORTED_COMMANDS = new String[]{CMD_EHLO, CMD_MAIL_FROM, CMD_RCPT_TO, CMD_DATA, CMD_QUIT};
 }
