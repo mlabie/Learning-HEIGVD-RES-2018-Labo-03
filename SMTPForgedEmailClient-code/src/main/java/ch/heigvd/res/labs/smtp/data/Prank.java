@@ -92,7 +92,7 @@ public class Prank {
 
 
         client.connect(smtpServerAddress, smtpServerPort);
-        client.EHLO("test");
+        client.EHLO("Saucisse");
 
         // Sends 1 forged e-mail for each victim.
         for(Victim victim : victims){
