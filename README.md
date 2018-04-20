@@ -77,4 +77,14 @@ In the [ch](https://github.com/mlabie/Learning-HEIGVD-RES-2018-Labo-03/tree/mast
 
 In the [ch](https://github.com/mlabie/Learning-HEIGVD-RES-2018-Labo-03/tree/master/SMTPForgedEmailClient-code/src/main/java/ch)/[heigvd](https://github.com/mlabie/Learning-HEIGVD-RES-2018-Labo-03/tree/master/SMTPForgedEmailClient-code/src/main/java/ch/heigvd)/[res](https://github.com/mlabie/Learning-HEIGVD-RES-2018-Labo-03/tree/master/SMTPForgedEmailClient-code/src/main/java/ch/heigvd/res)/[labs](https://github.com/mlabie/Learning-HEIGVD-RES-2018-Labo-03/tree/master/SMTPForgedEmailClient-code/src/main/java/ch/heigvd/res/labs)/[ch](https://github.com/mlabie/Learning-HEIGVD-RES-2018-Labo-03/tree/master/SMTPForgedEmailClient-code/src/main/java/ch)/[heigvd](https://github.com/mlabie/Learning-HEIGVD-RES-2018-Labo-03/tree/master/SMTPForgedEmailClient-code/src/main/java/ch/heigvd)/[res](https://github.com/mlabie/Learning-HEIGVD-RES-2018-Labo-03/tree/master/SMTPForgedEmailClient-code/src/main/java/ch/heigvd/res)/[labs](https://github.com/mlabie/Learning-HEIGVD-RES-2018-Labo-03/tree/master/SMTPForgedEmailClient-code/src/main/java/ch/heigvd/res/labs) package, you'll find only one file : [SMTPClient.java](https://github.com/mlabie/Learning-HEIGVD-RES-2018-Labo-03/blob/master/SMTPForgedEmailClient-code/src/main/java/ch/heigvd/res/labs/smtp/SMTPClient.java). This is our main file.
 
-We start by getting the configuration, the forged mail list and the victim list. Once it's done, we check the size of groups of victim () and the number of mail
+We start by getting the configuration, the forged mail list and the victim list. Once it's done, we check the size of groups of victim (minimum 3 victims by group) and the number of forged mails (minimum 1 mail). Then, we get the first victim to become the sender and the N next victims to become the receivers.
+
+A Prank object is instantiate with the new group, the forged mail and the configuration of the SMTP server (address and port). This object allow to send the forged mail to all the victims.
+
+### Example
+
+Here's an example of utilisation :
+
+![](C:\Users\David\Desktop\RES\labo\labo03\figures\telnet.jpg)
+
+This is the output generated when we send a mail. We can see that we are connected on a MockMock SMTP server.
