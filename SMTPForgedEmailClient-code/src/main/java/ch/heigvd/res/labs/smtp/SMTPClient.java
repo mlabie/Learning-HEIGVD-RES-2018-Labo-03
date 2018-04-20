@@ -4,9 +4,6 @@ import ch.heigvd.res.labs.smtp.data.ForgedEmail;
 import ch.heigvd.res.labs.smtp.data.GroupOfVictims;
 import ch.heigvd.res.labs.smtp.data.Prank;
 import ch.heigvd.res.labs.smtp.data.Victim;
-import ch.heigvd.res.labs.smtp.net.client.ISMTPClient;
-import ch.heigvd.res.labs.smtp.net.client.SMTPClientImpl;
-import ch.heigvd.res.labs.smtp.net.protocol.SMTPClientProtocol;
 import ch.heigvd.res.labs.smtp.util.ConfigurationReader;
 import ch.heigvd.res.labs.smtp.util.MailReader;
 import ch.heigvd.res.labs.smtp.util.VictimReader;
@@ -18,6 +15,7 @@ import java.util.logging.Level;
 import java.util.logging.Logger;
 
 /**
+ * Main class of our SMTP Forged E-mail client.
  * @author David Jaquet & Marc Labie
  */
 public class SMTPClient {
@@ -34,11 +32,13 @@ public class SMTPClient {
             int nbGroup         = config.getNumberOfGroup();
             int nbPeopleInGroup = victims.size() / nbGroup;
 
-            if(nbPeopleInGroup < 3){
+            // Check that there is enough e-mail addresse for each group
+            if(nbPeopleInGroup <= Prank.VICTIM_MIN){
                 Logger.getLogger(SMTPClient.class.getName()).log(Level.SEVERE, "Group too small !");
                 return;
             }
 
+            // Check that there is at least 1 forged e-mail in the mail file.
             if(forgedEmails.size() < 1){
                 Logger.getLogger(SMTPClient.class.getName()).log(Level.SEVERE, "Add at least 1 email !");
                 return;
@@ -46,6 +46,7 @@ public class SMTPClient {
 
             ForgedEmail lastEmail = forgedEmails.remove(0);
 
+            // Generating the Pranks
             for(int i = 0; i < nbGroup; i++) {
                 GroupOfVictims group = new GroupOfVictims();
 

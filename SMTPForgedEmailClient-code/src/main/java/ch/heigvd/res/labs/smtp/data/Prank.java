@@ -17,6 +17,8 @@ import java.util.logging.Logger;
  */
 public class Prank {
 
+    public final static int VICTIM_MIN = 2;
+
     private GroupOfVictims group;
     private ForgedEmail    mail;
     private String         smtpServerAddress;
@@ -81,7 +83,7 @@ public class Prank {
      * @throws TimeoutException
      */
     public void prankThemAll() throws IOException, TimeoutException{
-        if(group.getSender() == null || group.getVictims().size() < 2){
+        if(group.getSender() == null || group.getVictims().size() < VICTIM_MIN){
             LOG.log(Level.SEVERE, "You need to have 1 sender and 2 receivers at least");
             return;
         }
